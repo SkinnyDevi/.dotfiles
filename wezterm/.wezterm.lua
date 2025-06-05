@@ -38,10 +38,13 @@ if IsWindows() then
 	config.default_prog = { "pwsh", "-nologo" }
 end
 
+if IsArchLinux() or IsMacOS() then
+	config.default_prog = { "zsh" }
+end
+
 if IsArchLinux() then
 	config.enable_wayland = true
 	config.term = "wezterm"
-	config.default_prog = { "bash" }
 end
 
 -- BASE --
