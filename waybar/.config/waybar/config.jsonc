@@ -10,6 +10,7 @@
   ],
   "modules-right": [
     "pulseaudio",
+    "pulseaudio#microphone",
     "cpu",
     "memory",
     "clock"
@@ -31,8 +32,7 @@
         1,
         2,
         3,
-        4,
-        5
+        4
       ]
     },
     "sort-by": "number",
@@ -44,13 +44,10 @@
     "max-length": 50
   },
   "pulseaudio": {
-    // "scroll-step": 1, // %, can be a float
-    "format": "{volume}% {icon} {format_source}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": "\ueb24 {icon} {format_source}",
-    "format-muted": "0% \ueb24 {format_source}",
-    "format-source": "{volume}% ",
-    "format-source-muted": "0% ",
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-bluetooth-muted": "\ueb24 {icon}",
+    "format-muted": "0% \ueb24",
     "format-icons": {
       "headphone": "",
       "default": [
@@ -59,6 +56,13 @@
         ""
       ]
     },
+    "scroll-step": 1,
+    "on-click": "pavucontrol"
+  },
+  "pulseaudio#microphone": {
+    "format-source": "{volume}% ",
+    "format-source-muted": "0% ",
+    "format": "{format_source}",
     "on-click": "pavucontrol"
   },
   "cpu": {

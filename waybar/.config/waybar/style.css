@@ -2,15 +2,28 @@
     font-family: FiraCode Nerd Font;
     font-size: 13px;
     min-height: 0;
+    font-weight: bold;
 }
 
 #waybar {
-    background: #1a1b26;
+    background: transparent;
     color: #ffffff;
 }
 
+#waybar > * {
+  margin: 7px 0;
+}
+
+#workspaces {
+  margin-left: 10px;
+}
+
+#clock {
+  margin-right: 10px;
+}
+
 #workspaces button {
-    padding: 0 5px;
+    padding: 5px;
     background-color: transparent;
     color: #ffffff;
     border: none;
@@ -27,17 +40,13 @@
     background: rgba(0, 0, 0, 0.2);
 }
 
-#window {
-    padding: 0 10px;
-}
-
-#pulseaudio, #pulseaudio.microphone, #cpu, #memory, #clock {
-    padding: 0 10px;
-    background: #32344a;
+#workspaces, #window, #pulseaudio, #pulseaudio.microphone, #cpu, #memory, #clock {
+    background: #1a1b26;
+    padding: 2px 10px;
     margin: 0 4px;
     border-radius: 5px;
 }
 
-#pulseaudio.muted, #pulseaudio.microphone.muted {
+#pulseaudio.muted, #pulseaudio#microphone.muted {
     color: #ff5555;
 }
