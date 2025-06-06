@@ -1,0 +1,42 @@
+* {
+  font-family: JetBrainsMono, SpaceMono;
+  color: #e5e9f0;
+  border-radius: 10px;
+}
+
+#window {
+  background: rgba(41, 46, 66, 0.5);
+  margin: auto;
+  padding: 10px;
+  border: 2px solid #a100d7;
+  background-color: #151515;
+}
+
+#input {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, #99007a, #4300bf) 1;
+  outline: none;
+  border: 1px solid transparent;
+  font-weight: bold;
+}
+
+#outer-box {
+  padding: 20px;
+}
+
+#img {
+  margin-right: 6px;
+}
+
+#entry {
+  padding: 10px;
+}
+
+#entry:selected {
+  background-color: #330066;
+}
+
+#text {
+  margin: 2px;
+}
