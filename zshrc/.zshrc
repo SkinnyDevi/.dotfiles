@@ -130,3 +130,8 @@ alias gco="git checkout"
 alias gb="git branch"
 
 alias waybar-reload="pkill waybar && hyprctl dispatch exec waybar"
+alias hyprshell-reload="pkill hyprshell && hyprctl dispatch exec hyprshell run"
+alias update-ds="yay -S discord-canary"
+alias lwp="__GL_THREADED_OPTIMIZATIONS=0 linux-wallpaperengine"
+
+fastfetch
