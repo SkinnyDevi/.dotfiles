@@ -120,6 +120,7 @@ eval "$(pyenv init - venv)"
 alias py="python"
 alias venv="py -m venv"
 alias mkdir="mkdir -p"
+alias open="xdg-open"
 
 alias ga="git add"
 alias gcm="git commit -m "
