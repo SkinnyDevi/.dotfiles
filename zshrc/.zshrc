@@ -117,6 +117,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - venv)"
 
+alias ls="ls -latr"
 alias py="python"
 alias venv="py -m venv"
 alias mkdir="mkdir -p"
@@ -135,5 +136,6 @@ alias waybar-reload="pkill waybar && hyprctl dispatch exec waybar"
 alias hyprshell-reload="pkill hyprshell && hyprctl dispatch exec hyprshell run"
 alias update-ds="yay -S discord-canary"
 alias lwp="__GL_THREADED_OPTIMIZATIONS=0 linux-wallpaperengine"
+alias space-explorer="ncdu / "
 
 fastfetch
