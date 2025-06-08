@@ -6,6 +6,8 @@ if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
   exec Hyprland
 fi
 
+
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -111,13 +113,25 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+if [[ "$XDG_RUNTIME_DIR" ]]; then
+  WAYLAND_SOCKET=$(ls $XDG_RUNTIME_DIR | grep '^wayland-[0-9]\+$')
+
+  if [[ "$WAYLAND_SOCKET" ]]; then
+    export WAYLAND_DISPLAY="$WAYLAND_SOCKET"
+  else
+    echo "No valid Wayland socket found in $XDG_RUNTIME_DIR"
+  fi
+else
+  echo "XDG_RUNTIME_DIR is not set."
+fi
+
 export GTK_THEME="Kimi-dark"
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - venv)"
 
-alias ls="ls -latr"
+alias ls="ls --color=auto -latr"
 alias py="python"
 alias venv="py -m venv"
 alias mkdir="mkdir -p"
@@ -135,7 +149,8 @@ alias gb="git branch"
 alias waybar-reload="pkill waybar && hyprctl dispatch exec waybar"
 alias hyprshell-reload="pkill hyprshell && hyprctl dispatch exec hyprshell run"
 alias update-ds="yay -S discord-canary"
-alias lwp="__GL_THREADED_OPTIMIZATIONS=0 linux-wallpaperengine"
-alias space-explorer="ncdu / "
+alias lwp="linux-wallpaperengine --silent --scaling fill"
+alias lwph="linux-wallpaperengine --help"
+alias space-explorer="ncdu /"
 
 fastfetch
