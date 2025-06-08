@@ -131,12 +131,14 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - venv)"
 
+# Frequent commands
 alias ls="ls --color=auto -latr"
 alias py="python"
 alias venv="py -m venv"
 alias mkdir="mkdir -p"
 alias open="xdg-open"
 
+# Git aliases
 alias ga="git add"
 alias gcm="git commit -m "
 alias gc="git commit"
@@ -145,7 +147,9 @@ alias gp="git push"
 alias gl="git pull"
 alias gco="git checkout"
 alias gb="git branch"
+alias glog="git log --decorate --oneline --graph"
 
+# Utilities
 alias waybar-reload="pkill waybar && hyprctl dispatch exec waybar"
 alias hyprshell-reload="pkill hyprshell && hyprctl dispatch exec hyprshell run"
 alias update-ds="yay -S discord-canary"
