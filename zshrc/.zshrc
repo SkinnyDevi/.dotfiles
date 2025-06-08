@@ -125,7 +125,7 @@ else
   echo "XDG_RUNTIME_DIR is not set."
 fi
 
-export GTK_THEME="Kimi-dark"
+export GTK_THEME="Shades-of-purple"
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"

@@ -2,8 +2,10 @@
   "layer": "top",
   "position": "top",
   "height": 30,
+  "reload_style_on_change": true,
   "modules-left": [
-    "hyprland/workspaces"
+    "hyprland/workspaces",
+    "tray"
   ],
   "modules-center": [
     "hyprland/window"
@@ -13,6 +15,7 @@
     "pulseaudio#microphone",
     "cpu",
     "memory",
+    "bluetooth",
     "clock"
   ],
   "hyprland/workspaces": {
@@ -70,6 +73,9 @@
   },
   "memory": {
     "format": "RAM {}%"
+  },
+  "bluetooth": {
+    "on-click": "blueberry"
   },
   "clock": {
     "format": "{:%H:%M %d/%m/%Y}",
