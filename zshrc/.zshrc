@@ -6,8 +6,6 @@ if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
   exec Hyprland
 fi
 
-
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -113,6 +111,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 if [[ "$XDG_RUNTIME_DIR" ]]; then
   WAYLAND_SOCKET=$(ls $XDG_RUNTIME_DIR | grep '^wayland-[0-9]\+$')
 
@@ -124,8 +124,6 @@ if [[ "$XDG_RUNTIME_DIR" ]]; then
 else
   echo "XDG_RUNTIME_DIR is not set."
 fi
-
-export GTK_THEME="Shades-of-purple"
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
