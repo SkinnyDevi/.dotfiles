@@ -112,6 +112,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export XDG_CONFIG_HOME="$HOME/.config"
+export __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1
+export __GL_SHADER_DISK_CACHE_SIZE=100000000000 #100 gb max disk size of cache
 
 if [[ "$XDG_RUNTIME_DIR" ]]; then
   WAYLAND_SOCKET=$(ls $XDG_RUNTIME_DIR | grep '^wayland-[0-9]\+$')
@@ -150,7 +152,7 @@ alias glog="git log --decorate --oneline --graph"
 # Utilities
 alias waybar-reload="pkill waybar && hyprctl dispatch exec waybar"
 alias hyprshell-reload="pkill hyprshell && hyprctl dispatch exec hyprshell run"
-alias update-ds="yay -S discord-canary"
+alias update-ds="./.update-discord.sh"
 alias lwp="linux-wallpaperengine --silent --scaling fill"
 alias lwph="linux-wallpaperengine --help"
 alias space-explorer="ncdu /"

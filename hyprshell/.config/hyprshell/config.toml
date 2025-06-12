@@ -2,7 +2,7 @@ layerrules = true
 kill_bind = "ctrl+shift+alt, h"
 
 [launcher]
-default_terminal = "wezterm"
+default_terminal = "WAYLAND_DISPLAY=1 wezterm"
 width = 650
 max_items = 5
 show_when_empty = true

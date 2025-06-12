@@ -75,7 +75,7 @@ config.font_size = FONT_SIZE
 
 -- WINDOW --
 
-config.hide_tab_bar_if_only_one_tab = false
+config.hide_tab_bar_if_only_one_tab = true
 config.window_frame = {
 	font = config.font,
 	font_size = FONT_SIZE - 1,
