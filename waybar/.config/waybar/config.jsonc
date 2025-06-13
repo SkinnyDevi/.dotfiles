@@ -72,13 +72,15 @@
   "custom/qjackctl-graph": {
     "format": "🎛️",
     "tooltip": "Open Qjackctl Graph",
-    "on-click": "$HOME/.config/waybar/open_qjackctl_graph.sh"
+    "on-click": "easyeffects"
   },
   "cpu": {
-    "format": "CPU {usage}%"
+    "format": "CPU {usage}%",
+    "on-click": "WAYLAND_DISPLAY=1 wezterm start -- htop"
   },
   "memory": {
-    "format": "RAM {}%"
+    "format": "RAM {}%",
+    "on-click": "WAYLAND_DISPLAY=1 wezterm start -- htop"
   },
   "bluetooth": {
     "on-click": "blueberry"

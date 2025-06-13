@@ -159,5 +159,6 @@ alias update-ds="./.update-discord.sh"
 alias lwp="linux-wallpaperengine --silent --scaling fill"
 alias lwph="linux-wallpaperengine --help"
 alias space-explorer="ncdu /"
+alias davincimp4="$HOME/.mp4-davinci-helper.sh"
 
 fastfetch
