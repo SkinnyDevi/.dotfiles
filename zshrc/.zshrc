@@ -112,6 +112,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share/"
+
 export __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1
 export __GL_SHADER_DISK_CACHE_SIZE=100000000000 #100 gb max disk size of cache
 
@@ -150,6 +152,7 @@ alias gb="git branch"
 alias glog="git log --decorate --oneline --graph"
 
 # Utilities
+alias wezterm="WAYLAND_DISPLAY=1 wezterm"
 alias waybar-reload="pkill waybar && hyprctl dispatch exec waybar"
 alias hyprshell-reload="pkill hyprshell && hyprctl dispatch exec hyprshell run"
 alias update-ds="./.update-discord.sh"

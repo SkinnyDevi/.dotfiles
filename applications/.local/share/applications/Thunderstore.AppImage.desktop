@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Name=Thunderstore
+GenericName=Mod Manager
+Comment=Thunderstore Mod Manager for games
+Exec=/home/skinnydevi/.local/share/AppImage/Thunderstore.AppImage %u
+Icon=thunderstore
+Type=Application
+StartupNotify=false
+Terminal=false
+Categories=Utility;Game;
+Keywords=mod;manager;thunderstore;games;

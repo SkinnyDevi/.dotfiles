@@ -34,6 +34,7 @@
 
 #entry:selected {
   background-color: #330066;
+  font-weight: bold;
 }
 
 #text {

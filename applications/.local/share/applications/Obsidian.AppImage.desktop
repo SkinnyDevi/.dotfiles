@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Name=Obsidian
+GenericName=Note Taking
+Comment=Knowledge management and note-taking application
+Exec=/home/skinnydevi/.local/share/AppImage/Obsidian-1.8.10.AppImage %u
+Icon=obsidian
+Type=Application
+StartupNotify=false
+Terminal=false
+Categories=Office;Productivity;
+Keywords=notes;knowledge;markdown;obsidian;
