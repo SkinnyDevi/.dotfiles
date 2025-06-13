@@ -13,6 +13,7 @@
   "modules-right": [
     "pulseaudio",
     "pulseaudio#microphone",
+    "custom/qjackctl-graph",
     "cpu",
     "memory",
     "bluetooth",
@@ -67,6 +68,11 @@
     "format-source-muted": "0% ",
     "format": "{format_source}",
     "on-click": "pavucontrol"
+  },
+  "custom/qjackctl-graph": {
+    "format": "🎛️",
+    "tooltip": "Open Qjackctl Graph",
+    "on-click": "$HOME/.config/waybar/open_qjackctl_graph.sh"
   },
   "cpu": {
     "format": "CPU {usage}%"
