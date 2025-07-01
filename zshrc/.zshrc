@@ -155,10 +155,10 @@ alias glog="git log --decorate --oneline --graph"
 alias wezterm="WAYLAND_DISPLAY=1 wezterm"
 alias waybar-reload="pkill waybar && hyprctl dispatch exec waybar"
 alias hyprshell-reload="pkill hyprshell && hyprctl dispatch exec hyprshell run"
-alias update-ds="./.update-discord.sh"
 alias lwp="linux-wallpaperengine --silent --scaling fill"
 alias lwph="linux-wallpaperengine --help"
 alias space-explorer="ncdu /"
 alias davincimp4="$HOME/.mp4-davinci-helper.sh"
+alias winboot="./.winboot.sh"
 
 fastfetch
