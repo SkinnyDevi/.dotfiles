@@ -13,11 +13,10 @@
   "modules-right": [
     "pulseaudio",
     "pulseaudio#microphone",
-    "custom/qjackctl-graph",
     "cpu",
     "memory",
-    "bluetooth",
-    "clock"
+    "clock",
+    "custom/swaync"
   ],
   "hyprland/workspaces": {
     "format": "{name}: {icon}",
@@ -69,7 +68,7 @@
     "format": "{format_source}",
     "on-click": "pavucontrol"
   },
-  "custom/qjackctl-graph": {
+  "custom/easyeffects": {
     "format": "🎛️",
     "tooltip": "Open Qjackctl Graph",
     "on-click": "easyeffects"
@@ -88,5 +87,9 @@
   "clock": {
     "format": "{:%H:%M %d/%m/%Y}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "custom/swaync": {
+    "format": "🗄️",
+    "on-click": "swaync-client -t -sj"
   }
 }

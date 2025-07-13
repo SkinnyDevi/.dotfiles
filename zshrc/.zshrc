@@ -157,8 +157,8 @@ alias waybar-reload="pkill waybar && hyprctl dispatch exec waybar"
 alias hyprshell-reload="pkill hyprshell && hyprctl dispatch exec hyprshell run"
 alias lwp="linux-wallpaperengine --silent --scaling fill"
 alias lwph="linux-wallpaperengine --help"
-alias space-explorer="ncdu /"
+alias space-explorer="ncdu / --exclude /mnt/TERROBYTE/"
 alias davincimp4="$HOME/.mp4-davinci-helper.sh"
-alias winboot="./.winboot.sh"
+alias winboot="$HOME/.winboot.sh"
 
 fastfetch
