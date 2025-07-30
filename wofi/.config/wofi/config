@@ -1,5 +1,6 @@
 hide_scroll=true
-width=45%
+width=600
+height=400
 lines=11
 line_wrap=word
 term=WAYLAND_DISPLAY=1 wezterm start
