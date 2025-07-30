@@ -19,4 +19,4 @@ fi
 random_dir=$wallpapers[$((RANDOM % ${#wallpapers[@]} + 1))]
 wp_id=${random_dir:t}
 
-linux-wallpaperengine --silent --scaling fill --screen-root DP-1 --screen-root HDMI-A-1 --fps 20 "${wp_id}"
+linux-wallpaperengine --silent --scaling fill --screen-root DP-1 --screen-root DP-2 --fps 20 "${wp_id}"
