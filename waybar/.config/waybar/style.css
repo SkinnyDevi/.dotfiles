@@ -33,11 +33,29 @@
     background: rgba(0, 0, 0, 0.2);
 }
 
-#workspaces, #window, #pulseaudio, #cpu, #custom-qjackctl-graph, #custom-swaync, #memory, #clock, #bluetooth, #tray {
+#custom-idle_toggle,
+#workspaces, 
+#window, 
+#pulseaudio, 
+#cpu, 
+#custom-qjackctl-graph, 
+#custom-swaync, 
+#memory, 
+#clock, 
+#bluetooth, 
+#tray {
     background: #1a1b26;
     padding: 2px 10px;
     margin: 0 4px;
     border-radius: 5px;
+}
+
+#custom-idle_toggle {
+    padding: 2px 12px;
+}
+
+#custom-idle_toggle.activated {
+    color: #ff5555;
 }
 
 #pulseaudio.muted:not(.microphone),

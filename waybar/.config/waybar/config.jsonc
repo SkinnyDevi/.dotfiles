@@ -16,8 +16,14 @@
     "cpu",
     "memory",
     "clock",
+    "custom/idle_toggle",
     "custom/swaync"
   ],
+  "custom/idle_toggle": {
+    "format": "[☕]",
+    "on-click": "$HOME/.config/waybar/scripts/toggle-idle.sh",
+    "tooltip-format": "Enable/disable Hypridle"
+  },
   "hyprland/workspaces": {
     "format": "{name}: {icon}",
     "format-icons": {
@@ -90,6 +96,7 @@
   },
   "custom/swaync": {
     "format": "🗄️",
-    "on-click": "swaync-client -t -sj"
+    "on-click": "swaync-client -t -sj",
+    "tooltip-format": "Notification Center"
   }
 }

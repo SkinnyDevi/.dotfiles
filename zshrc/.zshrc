@@ -2,7 +2,7 @@
 # .zshrc - oh-my-zsh #
 ######################
 
-if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ] [ "$XDG_CURRENT_DESKTOP" != "GNOME" ]; then
   exec Hyprland
 fi
 
