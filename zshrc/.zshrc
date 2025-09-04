@@ -160,5 +160,6 @@ alias lwph="linux-wallpaperengine --help"
 alias space-explorer="ncdu / --exclude /mnt/TERROBYTE/"
 alias davincimp4="$HOME/.mp4-davinci-helper.sh"
 alias winboot="$HOME/.winboot.sh"
+alias shutdown="sudo systemctl poweroff"
 
 fastfetch

@@ -9,4 +9,4 @@ echo "Setting GRUB to boot Windows (index $WINDOWS_INDEX) once..."
 sudo grub-reboot "$WINDOWS_INDEX"
 
 echo "Rebooting now into Windows..."
-sudo reboot
+sudo systemctl reboot
