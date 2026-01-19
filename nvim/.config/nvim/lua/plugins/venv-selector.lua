@@ -8,7 +8,7 @@ return {
     "nvim-telescope/telescope.nvim",
   },
   lazy = false,
-  branch = "regexp",
+  branch = "main",
   opts = {
     settings = {
       search = {

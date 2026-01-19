@@ -2,9 +2,18 @@
 # .zshrc - oh-my-zsh #
 ######################
 
-if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ] [ "$XDG_CURRENT_DESKTOP" != "GNOME" ]; then
-  exec Hyprland
+# if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ] [ "$XDG_CURRENT_DESKTOP" != "GNOME" ]; then
+#   exec Hyprland
+# fi
+
+if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+  Hyprland
 fi
+
+
+# if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty2" ]; then
+#  XDG_CURRENT_DESKTOP=x11 GDK_BACKEND=x11 startx
+# fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
@@ -160,6 +169,11 @@ alias lwph="linux-wallpaperengine --help"
 alias space-explorer="ncdu / --exclude /mnt/TERROBYTE/"
 alias davincimp4="$HOME/.mp4-davinci-helper.sh"
 alias winboot="$HOME/.winboot.sh"
-alias shutdown="sudo systemctl poweroff"
+alias shutdown="sudo systemctl poweroff -f"
+alias reboot="sudo systemctl reboot"
+alias logout="hyprctl dispatch exit"
+
+alias protontricks='flatpak run com.github.Matoking.protontricks'
+alias protontricks-launch='flatpak run --command=protontricks-launch com.github.Matoking.protontricks'
 
 fastfetch
