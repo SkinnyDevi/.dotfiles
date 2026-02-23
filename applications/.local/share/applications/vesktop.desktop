@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Vesktop
+GenericName=Internet Messenger
+Comment=A standalone Electron-based Discord app with Vencord & improved Linux support
+Exec=vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland %U
+Icon=vesktop
+Terminal=false
+Type=Application
+Categories=Network;InstantMessaging;Chat;
+StartupWMClass=vesktop
+Keywords=discord;vencord;chat;voice;

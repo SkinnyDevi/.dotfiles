@@ -28,6 +28,15 @@ function IsWindows()
 	return package.config:sub(1, 1) == "\\" or os.getenv("OS") == "Windows_NT"
 end
 
+function isGNOME()
+	if not IsArchLinux() then
+		return false
+	end
+
+	local desktop_session = os.getenv("XDG_SESSION_DESKTOP")
+	return desktop_session == "GNOME"
+end
+
 -- BASE --
 
 config.front_end = "OpenGL"
@@ -75,7 +84,7 @@ config.font_size = FONT_SIZE
 
 -- WINDOW --
 
-config.hide_tab_bar_if_only_one_tab = true
+config.hide_tab_bar_if_only_one_tab = not isGNOME()
 config.window_frame = {
 	font = config.font,
 	font_size = FONT_SIZE - 1,
@@ -88,7 +97,7 @@ config.inactive_pane_hsb = {
 	brightness = 0.65,
 }
 
-config.window_decorations = "NONE | RESIZE"
+config.window_decorations = "RESIZE"
 
 -- WINDOW --
 

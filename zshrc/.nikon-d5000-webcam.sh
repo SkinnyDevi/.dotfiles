@@ -1,4 +1,5 @@
 #!/bin/zsh
+# packages needed: gphoto2 v4l2loopback-dkms or v4l2loopback
 
 gphoto2 --set-config /main/actions/viewfinder=1
 gphoto2 --set-config /main/capturesettings/liveviewafmode="Face-priority AF"
