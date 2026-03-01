@@ -26,4 +26,12 @@ hyprctl clients -j | jq -r '.[] .address' | while read -r addr; do
 	hyprctl dispatch "$ACTION" "address:$addr" >/dev/null 2>&1
 done
 
+sleep 2
+
+if [[ $ACTION == "setfloating" ]]; then
+	hyprctl keyword input:follow_mouse 2
+else
+	hyprctl keyword input:follow_mouse 1
+fi
+
 exit 0
