@@ -72,12 +72,50 @@ end
 -- COLORS --
 
 config.window_background_opacity = WIN_OPACITY
-config.color_scheme = "Rosé Pine (Gogh)"
-config.colors = {
-	background = "rgba(25, 23, 36, 1)",
-}
 
-config.font = wezterm.font("FiraCode Nerd Font", { weight = "Bold" })
+if IsArchLinux() and not isGNOME() then
+	local colors = {}
+	for line in io.lines(os.getenv("HOME") .. "/.cache/wal/colors") do
+		table.insert(colors, line)
+	end
+
+	config.color_scheme = "WAL Dynamic"
+	config.colors = {
+		foreground = colors[16] or "#c5c8c6",
+		background = colors[1] or "#1d1f21",
+		ansi = {
+			colors[1],
+			colors[2],
+			colors[3],
+			colors[4],
+			colors[5],
+			colors[6],
+			colors[7],
+			colors[8],
+		},
+		brights = {
+			colors[9],
+			colors[10],
+			colors[11],
+			colors[12],
+			colors[13],
+			colors[14],
+			colors[15],
+			colors[16],
+		},
+	}
+else
+	config.color_scheme = "Rosé Pine (Gogh)"
+	config.colors = {
+		background = "rgba(25, 23, 36, 1)",
+	}
+end
+
+if IsArchLinux() then
+	config.font = wezterm.font("SpaceMono Nerd Font", { weight = "Bold" })
+else
+	config.font = wezterm.font("FiraCode Nerd Font", { weight = "Bold" })
+end
 config.font_size = FONT_SIZE
 
 -- COLORS --

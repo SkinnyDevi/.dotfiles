@@ -1,20 +1,15 @@
-* {
-  color: #e5e9f0;
-  border-radius: 10px;
-}
-
 #window {
-  background: rgba(41, 46, 66, 0.5);
+  background: --wofi-color0;
   margin: 10px;
   padding: 10px;
-  border: 2px solid #a100d7;
-  background-color: #151515;
+  border: 2px solid --wofi-color4;
+  background-color: --wofi-color0;
 }
 
 #input {
   padding: 10px;
   margin-bottom: 10px;
-  background: linear-gradient(45deg, #99007a, #4300bf);
+  background: linear-gradient(45deg, --wofi-color2, --wofi-color3);
   outline: none;
   border: 1px solid transparent;
   font-weight: bold;
@@ -29,14 +24,15 @@
 }
 
 #entry {
-  padding: 5px;
+  padding: 05px;
+  background-color: --wofi-color0;
 }
 
 #entry:selected {
-  background-color: #330066;
   font-weight: bold;
 }
 
 #text {
   margin: 2px;
+  color: #cccccc;
 }

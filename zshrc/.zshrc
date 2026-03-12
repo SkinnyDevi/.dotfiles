@@ -7,7 +7,7 @@
 # fi
 
 if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-  Hyprland
+  start-hyprland
 fi
 
 
@@ -169,7 +169,7 @@ alias lwph="linux-wallpaperengine --help"
 alias space-explorer="ncdu / --exclude /mnt/TERROBYTE/"
 alias davincimp4="$HOME/.mp4-davinci-helper.sh"
 alias winboot="$HOME/.winboot.sh"
-alias shutdown="sudo systemctl poweroff -f"
+# alias shutdown="sudo systemctl poweroff -f"
 alias reboot="sudo systemctl reboot"
 alias logout="hyprctl dispatch exit"
 

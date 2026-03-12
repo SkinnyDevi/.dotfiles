@@ -91,7 +91,8 @@
     "on-click": "blueberry"
   },
   "clock": {
-    "format": "{:%H:%M %d/%m/%Y}",
+    "format": "{:%a %b %d %H:%M:%S}",
+    "interval": 1,
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "custom/swaync": {
