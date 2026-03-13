@@ -1,0 +1,13 @@
+module Config
+
+singleton AppState           	1.0 AppState.qml
+singleton NotificationService 1.0 NotificationService.qml
+singleton SystemMetrics				1.0 SystemMetrics.qml
+
+BarButton      		 1.0 BarButton.qml
+NotificationCenter 1.0 NotificationCenter.qml
+NotifItem        	 1.0 NotifItem.qml
+shell              1.0 shell.qml
+StatButton         1.0 StatButton.qml
+ToastPanel         1.0 ToastPanel.qml
+TopBar             1.0 TopBar.qml
