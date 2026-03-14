@@ -11,3 +11,4 @@ shell              1.0 shell.qml
 StatButton         1.0 StatButton.qml
 ToastPanel         1.0 ToastPanel.qml
 TopBar             1.0 TopBar.qml
+AppTray            1.0 AppTray.qml

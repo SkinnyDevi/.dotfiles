@@ -63,7 +63,7 @@ PanelWindow {
             anchors.verticalCenter: parent.verticalCenter
             width: 48
             height: 48
-            source: AppState.toastNotification ? (AppState.toastNotification.image ? AppState.toastNotification.image : (AppState.toastNotification.appIcon ? "image://icon/" + AppState.toastNotification.appIcon : "")) : ""
+            source: AppState.toastNotification ? (AppState.toastNotification.image ? AppState.toastNotification.image : (AppState.toastNotification.appIcon ? AppState.toastNotification.appIcon : "")) : ""
             fillMode: Image.PreserveAspectFit
             visible: source.toString().length > 0
         }

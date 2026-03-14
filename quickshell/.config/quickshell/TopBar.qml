@@ -126,6 +126,18 @@ PanelWindow {
                 }
             }
 
+            // Separator between Workspaces and AppTray
+            Rectangle {
+                width: 1
+                height: 20
+                color: AppState.barBorderColor
+                Layout.alignment: Qt.AlignVCenter
+            }
+
+            AppTray {
+                panelWindow: bar
+            }
+
             Item {
                 Layout.fillWidth: true
             }

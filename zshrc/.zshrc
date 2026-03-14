@@ -7,6 +7,7 @@
 # fi
 
 if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+  rm $HOME/.pyenv/shims/.pyenv-shim 2> /dev/null
   start-hyprland
 fi
 
