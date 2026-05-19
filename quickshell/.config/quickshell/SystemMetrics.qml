@@ -12,6 +12,8 @@ Singleton {
     property bool hypridleEnabled: false
     property int volumePercent: 0
     property int micPercent: 0
+    property bool volumeMuted: false
+    property bool micMuted: false
     property int cpuPercent: 0
     property int ramPercent: 0
     property string ramUsedGB: ""
@@ -102,6 +104,15 @@ Singleton {
     }
 
     Process {
+        id: volumeMuteProc
+        command: ["bash", "-lc", "pactl get-sink-mute @DEFAULT_SINK@ | awk '{print tolower($2)}' || echo no"]
+        stdout: StdioCollector {
+            id: volumeMuteOut
+        }
+        onExited: metrics.volumeMuted = metrics.trimText(volumeMuteOut.text) === "yes"
+    }
+
+    Process {
         id: micProc
         command: ["bash", "-lc", "pactl get-source-volume @DEFAULT_SOURCE@ | grep -Eo '[0-9]+%' | head -n1 | tr -d '%' || echo 0"]
         stdout: StdioCollector {
@@ -112,6 +123,15 @@ Singleton {
             if (!isNaN(v))
                 metrics.micPercent = v;
         }
+    }
+
+    Process {
+        id: micMuteProc
+        command: ["bash", "-lc", "pactl get-source-mute @DEFAULT_SOURCE@ | awk '{print tolower($2)}' || echo no"]
+        stdout: StdioCollector {
+            id: micMuteOut
+        }
+        onExited: metrics.micMuted = metrics.trimText(micMuteOut.text) === "yes"
     }
 
     Process {
@@ -164,6 +184,8 @@ Singleton {
         onTriggered: {
             volumeProc.running = true;
             micProc.running = true;
+            volumeMuteProc.running = true;
+            micMuteProc.running = true;
         }
     }
 
@@ -201,6 +223,8 @@ Singleton {
         hypridleStateProc.running = true;
         volumeProc.running = true;
         micProc.running = true;
+        volumeMuteProc.running = true;
+        micMuteProc.running = true;
         cpuProc.running = true;
         ramProc.running = true;
     }

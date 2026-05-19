@@ -1,5 +1,5 @@
 # Edit with `hyprshell config edit`
-version = 3
+version = 4
 
 [windows]
 scale = 6.0
@@ -10,4 +10,5 @@ modifier = "super"
 key = "Tab"
 filter_by = []
 switch_workspaces = false
-exclude_special_workspaces = ""
+exclude_workspaces = ""
+kill_key = "q"

@@ -185,6 +185,7 @@ PanelWindow {
                 StatButton {
                     iconText: bar.micIcon(SystemMetrics.micPercent)
                     valueText: SystemMetrics.micPercent + "%"
+                    textColor: SystemMetrics.micMuted ? AppState.notifUrgentColor : AppState.barTextColor
                     onClicked: {
                         pavuProc.command = ["bash", "-lc", "pavucontrol"];
                         pavuProc.running = true;
@@ -194,6 +195,7 @@ PanelWindow {
                 StatButton {
                     iconText: bar.volumeIcon(SystemMetrics.volumePercent)
                     valueText: SystemMetrics.volumePercent + "%"
+                    textColor: SystemMetrics.volumeMuted ? AppState.notifUrgentColor : AppState.barTextColor
                     onClicked: {
                         pavuProc.command = ["bash", "-lc", "pavucontrol"];
                         pavuProc.running = true;

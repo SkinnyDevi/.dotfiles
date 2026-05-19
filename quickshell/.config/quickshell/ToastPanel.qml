@@ -16,9 +16,10 @@ PanelWindow {
     }
 
     function adaptBodyText(bodyText) {
-        if (bodyText.length < 35)
+        const characterLimit = 30;
+        if (bodyText.length < characterLimit)
             return bodyText;
-        return bodyText.substring(0, 35).trim() + "...";
+        return bodyText.substring(0, characterLimit).trim() + "...";
     }
 
     visible: (AppState.toastVisible || offsetX < 390) && AppState.toastNotification !== null && !AppState.notifPanelOpen && Hyprland.focusedMonitor != null && modelData.name === Hyprland.focusedMonitor.name

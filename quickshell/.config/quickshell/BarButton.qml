@@ -4,6 +4,7 @@ Rectangle {
     id: btn
     property string iconText: ""
     property string labelText: ""
+    property color textColor: AppState.barTextColor
     property int iconPixelSize: 14
     property int labelPixelSize: 13
     property bool clickable: true
@@ -47,7 +48,7 @@ Rectangle {
         Text {
             visible: btn.iconText.length > 0
             text: btn.iconText
-            color: AppState.barTextColor
+            color: btn.textColor
             font.family: AppState.fontFamily
             font.pixelSize: btn.iconPixelSize
             font.bold: true
@@ -56,7 +57,7 @@ Rectangle {
         Text {
             visible: btn.labelText.length > 0
             text: btn.labelText
-            color: AppState.barTextColor
+            color: btn.textColor
             font.family: AppState.fontFamily
             font.pixelSize: btn.labelPixelSize
             font.bold: true

@@ -18,7 +18,7 @@ ln -s "$img" $HOME/.current_wallpaper
 
 wal -i "$img"
 
-swww img "$img" \
+awww img "$img" \
   -t "$TRANSITION_TYPE" \
   --transition-angle "$TRANSITION_ANGLE" \
   --transition-step "$STEP" \
