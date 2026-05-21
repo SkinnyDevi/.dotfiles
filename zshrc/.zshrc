@@ -6,11 +6,10 @@
 #   exec Hyprland
 # fi
 
-if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-  rm $HOME/.pyenv/shims/.pyenv-shim 2> /dev/null
-  start-hyprland
-fi
-
+# if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+#   rm $HOME/.pyenv/shims/.pyenv-shim 2> /dev/null
+#   start-hyprland
+# fi
 
 # if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty2" ]; then
 #  XDG_CURRENT_DESKTOP=x11 GDK_BACKEND=x11 startx
@@ -88,7 +87,11 @@ ZSH_THEME="fletcherm"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  sudo
+  archlinux
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -143,6 +146,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - venv)"
 
+source <(fzf --zsh)
+
 # Frequent commands
 alias ls="ls --color=auto -latr"
 alias py="python"
@@ -167,7 +172,7 @@ alias waybar-reload="pkill waybar && hyprctl dispatch exec waybar"
 alias hyprshell-reload="pkill hyprshell && hyprctl dispatch exec hyprshell run"
 alias lwp="linux-wallpaperengine --silent --scaling fill"
 alias lwph="linux-wallpaperengine --help"
-alias space-explorer="ncdu / --exclude /mnt/TERROBYTE/"
+# alias space-explorer="ncdu / --exclude /mnt/TERROBYTE/"
 alias davincimp4="$HOME/.mp4-davinci-helper.sh"
 alias winboot="$HOME/.winboot.sh"
 alias shutdown="shutdown now --poweroff -h"

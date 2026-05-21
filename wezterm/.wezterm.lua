@@ -64,7 +64,7 @@ local WIN_OPACITY = 0.8
 local FONT_SIZE = 13
 
 if IsArchLinux() then
-	FONT_SIZE = 12
+	FONT_SIZE = 13
 end
 
 -- CONSTANTS --
@@ -122,7 +122,7 @@ config.font_size = FONT_SIZE
 
 -- WINDOW --
 
-config.hide_tab_bar_if_only_one_tab = not isGNOME()
+config.hide_tab_bar_if_only_one_tab = not IsArchLinux()
 config.window_frame = {
 	font = config.font,
 	font_size = FONT_SIZE - 1,
@@ -134,6 +134,9 @@ config.inactive_pane_hsb = {
 	saturation = 0.9,
 	brightness = 0.65,
 }
+
+config.initial_rows = 32
+config.initial_cols = 170
 
 config.window_decorations = "RESIZE"
 
